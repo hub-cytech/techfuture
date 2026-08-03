@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Tech Future 2025</title>
+    <title>Inscription | Tech Future 2025</title>
 </head>
 <body>
     <header>
@@ -20,19 +20,83 @@
     <main>
         <div>
             <h2>Inscrivez-vous à la conférence</h2>
-            <p>Remplissez le formulaire ci-dessous pour réserver votre place.</p>
+            <p><span><strong>Vous souhaitez participer à Tech Future 2025 ?</strong></span> Remplissez le formulaire ci-dessous pour réserver votre place.</p>
             
         </div>
         <div class="formulaire">
-            <form action="" method="post">
-                <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom">
+            <form class="form-inscrire" action="#" method="post">
+                <div class="form-group">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
                 
+                <div class="form-group">
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Votre adresse email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="categorie">Vous êtes :</label>
+                    <select id="categorie" name="categorie" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="participant">Participant</option>
+                        <option value="etudiant">Étudiant</option>
+                        <option value="conferencier">Conférencier</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Choisissez vos ateliers :</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="ateliers" value="ia"> Intelligence Artificielle
+                        </label>
+                        <label>
+                            <input type="checkbox" name="ateliers" value="cybersecurite"> Cybersécurité moderne
+                        </label>
+                        <label>
+                            <input type="checkbox" name="ateliers" value="blockchain"> Blockchain et Web3
+                        </label>
+                        <label>
+                            <input type="checkbox" name="ateliers" value="robotique"> Robotique et automatisation
+                        </label>
+                        <label>
+                            <input type="checkbox" name="ateliers" value="cloud"> Cloud computing
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="repas">Préférence de repas :</label>
+                    <select id="repas" name="repas" required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option value="standard">Standard</option>
+                        <option value="vegetarien">Végétarien</option>
+                        <option value="sans-allergene">Sans allergène</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-button">Valider mon inscription</button>
             </form>
         </div>
     </main>
     <footer>
-
+        <div class="contact">
+            <strong>Contact: </strong><a href="mailto:contact@techfuture2025.com">contact@techfuture2025.com</a>
+        </div>
+        <ul class="socials">
+            <li><a href="#twitter">Twitter / X</a></li>
+            <li><a href="#linkedin">LinkedIn</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+        </ul>
+        <div class="legal">
+            © 2025 Tech Future — Tous droits réservés
+        </div>
     </footer>
 </body>
 </html>
