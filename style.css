@@ -1,11 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+
+}
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
+    width: 100%;
 }
-.menu {
-    background-color: navajowhite;
+.logo {
+    font-weight: bold;
+    font-size: 20px;
 }
-.menu a {
-    padding: 10px 10px;
+.logo-div {
+    width: 30%;
+}
+.logo span {
+    color: red;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    list-style: none;
+}
+.menu ul li {
+    padding: 10px 20px;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.bienvenue {
+    color:rgb(4, 122, 225)
+}
+section h2 {
+
 }
