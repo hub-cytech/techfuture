@@ -2,42 +2,639 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Avenir, Poppins, Times, 'Times New Roman', serif;
 }
-body {
 
+body {
+    background-color: #f5f5f5;
+    color: #222;
+    overflow-x: hidden;
 }
-header {
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   Navbar & Navigation
+   ========================================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     width: 100%;
+    padding: 14px 40px;
+    background: linear-gradient(to bottom, rgba(228, 250, 255, 0.95), rgba(215, 225, 230, 0.85));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    gap: 15px;
+    transition: all 0.3s ease;
 }
-.logo {
-    font-weight: bold;
-    font-size: 20px;
+
+.logo a {
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    color: #222;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
 }
-.logo-div {
-    width: 30%;
+
+.logo a:hover {
+    opacity: 0.85;
 }
+
 .logo span {
     color: red;
 }
+
 .menu ul {
     display: flex;
-    justify-content: space-between;
-    width: 40%;
+    align-items: center;
+    gap: 30px;
     list-style: none;
+    flex-wrap: wrap;
 }
-.menu ul li {
-    padding: 10px 20px;
-}
-.menu ul li a{
-    text-decoration: none;
-}
-.bienvenue {
-    color:rgb(4, 122, 225)
-}
-section h2 {
 
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 6px 2px;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #1e3cd1;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #1e3cd1;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   Hero Accueil
+   ========================================= */
+.hero-acceuil {
+    padding: 40px 20px;
+    min-height: 55vh;
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("img/headway.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bienvenue {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    margin-bottom: 8px;
+}
+
+.slogan {
+    color: #f5f5f5;
+    text-align: center;
+    font-style: italic;
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    margin-bottom: 20px;
+}
+
+.info-acceuil {
+    color: antiquewhite;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    gap: 6px;
+}
+
+.btn-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-reserve {
+    position: relative;
+    text-decoration: none;
+    padding: 10px 24px;
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 10px;
+    box-shadow: 1px 0px 10px 1px #f5f5f5b3;
+    color: #222;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-reserve:hover {
+    background-color: yellow;
+    border: 2px solid yellow;
+    box-shadow: 1px 0px 10px 1px #f6f04bb3;
+    color: #111;
+}
+
+/* =========================================
+   FAQ / Aside (Accueil)
+   ========================================= */
+.faq {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.faq h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.faq ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq li {
+    line-height: 1.5;
+    color: #333;
+}
+
+/* =========================================
+   Programme & Tables (program.html)
+   ========================================= */
+.programme {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.programme > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.jour1, .jour2, .jour3 {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 12px;
+}
+
+.prog-table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.prog-table caption {
+    font-weight: bold;
+    padding: 6px 4px 12px;
+    text-align: left;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.prog-table th,
+.prog-table td {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 11px 14px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.prog-table th {
+    background-color: rgba(0, 0, 0, 0.04);
+    color: #222;
+    font-weight: 600;
+}
+
+.prog-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================
+   Invités d'honneur (program.html)
+   ========================================= */
+.invites {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 20px 60px;
+    text-align: center;
+}
+
+.invites > h2 {
+    margin-bottom: 35px;
+    color: #222;
+}
+
+.invite-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.invite-img article {
+    flex: 1 1 250px;
+    max-width: 290px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.invite-img article:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.invite-img figure {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.invite-img img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.invite-img figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+.invite-img h3 {
+    margin: 8px 0 6px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.invite-img p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* =========================================
+   Inscription Form (inscription.html)
+   ========================================= */
+main > div:first-child {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px 10px;
+}
+
+main > div:first-child h2 {
+    margin-bottom: 10px;
+}
+
+.formulaire {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 40px;
+    padding: 25px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333;
+    text-align: left;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    outline: none;
+    border-color: #1e3cd1;
+    box-shadow: 0 0 0 2px rgba(30, 60, 209, 0.15);
+}
+
+/* Sélecteurs de choix : "Vous êtes" (#categorie) et "Préférence de repas" (#repas) */
+.form-group select {
+    width: 100%;
+    padding: 12px 42px 12px 15px;
+    background-color: #ffffff;
+    border: 1.5px solid #d0d7de;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #24292f;
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e3cd1' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.form-group select:hover {
+    border-color: #1e3cd1;
+    background-color: #f7faff;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #1e3cd1;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3.5px rgba(30, 60, 209, 0.15);
+}
+
+.form-group select option {
+    padding: 10px;
+    background-color: #ffffff;
+    color: #222;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #1e3cd1;
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 10px;
+    box-shadow: 1px 0px 10px 1px #f5f5f5b3;
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: yellow;
+    border-color: yellow;
+    box-shadow: 1px 0px 10px 1px #f6f04bb3;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background-color: #6b6969;
+    color: #f5f5f5;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+footer a {
+    color: #f5f5f5;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: yellow;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.newsletter input[type="email"] {
+    flex: 1 1 200px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.newsletter button {
+    padding: 8px 16px;
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter button:hover {
+    background-color: yellow;
+    border-color: yellow;
+}
+
+address, .contact {
+    font-style: normal;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.socials li {
+    margin: 0;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 0.95rem;
+}
+
+.socials a:hover {
+    color: yellow;
+}
+
+.legal {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+}
+
+/* =========================================
+   Responsive Media Queries
+   ========================================= */
+
+/* Tablet & Medium screens (<= 768px) */
+@media screen and (max-width: 768px) {
+    .menu ul {
+        gap: 20px;
+    }
+
+    .hero-acceuil {
+        padding: 35px 15px;
+    }
+
+    .formulaire {
+        margin: 15px auto 30px;
+        padding: 20px 15px;
+    }
+}
+
+/* Mobile screens (<= 480px) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .menu ul {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    .hero-acceuil {
+        padding: 30px 12px;
+    }
+
+    .btn-reserve {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 100%;
+    }
+
+    .prog-table th,
+    .prog-table td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .socials {
+        gap: 12px;
+    }
 }

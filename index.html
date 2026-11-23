@@ -7,41 +7,32 @@
     <title>Accueil | Tech Future 2025</title>
 </head>
 <body>
-    <header>
-        <div class="logo-div">
-            <div class="logo">
-                <p>T<span>-</span>Future</p>
-            </div>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">T<span>-</span>Future</a>
         </div>
         <nav class="menu">
             <ul>          
-                <li><a href="acceuil.html">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="program.html">Programme</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
             </ul>
         </nav>
-        <div class="btn-header">
-            <button class="btn">
-                <a href="inscription.html"><span>Participer</span></a>
-            </button>
-        </div>
     </header>
     <main>
-        <section>
+        <section class="hero-acceuil">
             <h2 class="bienvenue">Bienvenue à Tech Future 2025</h2>
             <p class="slogan">La conférence qui explore les technologies de demain</p>
-            <div class="img-acceuil">
-                <img src="img/headway.jpg" alt="Les gens à la conference de Tech Future" width="500" height="320">
-            </div>
-            <div>
+            <div class="info-acceuil">
                 <p>Tech Future 2025 est le rendez-vous incontournable pour tous les passionnés de technologie. Pendant trois jours, la conférence réunit experts et passionnés autour de l'intelligence artificielle, de la cybersécurité et des innovations qui façonnent le monde de demain. Que vous soyez professionnel du secteur, étudiant ou simplement curieux des nouvelles technologies, vous trouverez des conférences, des ateliers et des rencontres pensés pour vous. Repartez avec des connaissances concrètes, de nouveaux contacts, et une vision claire des tendances qui marqueront les prochaines années.</p>
                 <div class="info-box">
                     <p><strong>Date :</strong> 16 au 18 Mai 2025</p>
                     <p><strong>Lieu :</strong> Centre des Congrès, Paris</p>
                 </div>
+                <div class="btn-div">
+                    <a class="btn-reserve" href="inscription.html">Reservez votre place</a>
+                </div>
             </div>
-            <button class="btn-rsa"><a href="inscription.html">Reservez votre place</a></button>
-
         </section>
     </main>
     <aside>
@@ -56,21 +47,20 @@
     </aside>
     <footer>
         <div class="newsletter">
-            <label for="email-letter">En Savoir plus</label>
-            <input type="email" name="email-letter" id="email-letter" placeholder="contact@gmai.com">
-            <button type="submit">Envoyer</button>
+            <label for="email-letter">Recevez nos actualités</label>
+            <form action="#" method="post">
+                <input type="email" name="email-letter" id="email-letter" placeholder="votre@email.com" required>
+                <button type="submit">Envoyer</button>
+            </form>
         </div>
-        <div class="contact">
-            <strong> Contact:</strong> <a href="mailto:contact@techfuture2025.com">contact@techfuture2025.com</a>
-        </div>
+        <address><strong> Contact:</strong> <a href="mailto:contact@techfuture2025.com">contact@techfuture2025.com</a></address>
         <ul class="socials">
             <li><a href="#twitter">Twitter / X</a></li>
             <li><a href="#linkedin">LinkedIn</a></li>
             <li><a href="#youtube">YouTube</a></li>
         </ul>
-        <div class="legal">
-            © 2025 Tech Future — Tous droits réservés
-        </div>
+        <small class="legal">© 2025 Tech Future — Tous droits réservés</small>
     </footer>
 </body>
 </html>
+

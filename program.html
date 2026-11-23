@@ -7,49 +7,41 @@
     <title>Programme | Tech Future 2025</title>
 </head>
 <body>
-    <header>
-        <div class="logo-div">
-            <div class="logo">
-                <p>T<span>-</span>Future</p>
-            </div>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">T<span>-</span>Future</a>
         </div>
         <nav class="menu">
-            <ul>          
-                <li><a href="acceuil.html">Accueil</a></li>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="program.html">Programme</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
             </ul>
         </nav>
-        <div class="btn-header">
-            <button href="inscription.html" class="btn">
-                <a href="inscription.html"><span>Participer</span></a>
-            </button>
-        </div>
     </header>
     <main>
         <section class="programme">
             <h2>Programme de la conférence</h2>
 
-            <h4>Programme de la première journée </h4>
             <div class="jour1">
                 <table class="prog-table">
+                    <caption>Programme de la première journée</caption>
                     <thead>
                         <tr>
-                            <th>Jour</th>
-                            <th>Heure</th>
-                            <th>Sujet</th>
-                            <th>Conférencier</th>
+                            <th scope="col">Jour</th>
+                            <th scope="col">Heure</th>
+                            <th scope="col">Sujet</th>
+                            <th scope="col">Conférencier</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>16 Mai</td>
+                            <td rowspan="2">16 Mai</td>
                             <td>10:00 - 11:30</td>
                             <td>Les tendances de l'Intelligence Artificielle</td>
-                            <td>Dr. Alice Dupont</td>
+                            <td>Mme Sophie Bernard</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>14:00 - 15:30</td>
                             <td>Cybersécurité moderne</td>
                             <td>M. Jean Martin</td>
@@ -57,26 +49,25 @@
                     </tbody>
                 </table>
             </div>
-            <h4>Le programme de la deuxième journée</h4>
             <div class="jour2">
                 <table class="prog-table">
+                    <caption>Programme de la deuxième journée</caption>
                     <thead>
                         <tr>
-                            <th>Jour</th>
-                            <th>Heure</th>
-                            <th>Sujet</th>
-                            <th>Conférencier</th>
+                            <th scope="col">Jour</th>
+                            <th scope="col">Heure</th>
+                            <th scope="col">Sujet</th>
+                            <th scope="col">Conférencier</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>17 Mai</td>
+                            <td rowspan="2">17 Mai</td>
                             <td>09:30 - 11:00</td>
                             <td>Blockchain et Web3 : mythe ou révolution ?</td>
-                            <td>Mme Sophie Bernard</td>
+                            <td>Mme Julie Moreau</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>13:30 - 15:00</td>
                             <td>Robotique et automatisation industrielle</td>
                             <td>M. Karim Haddad</td>
@@ -84,26 +75,25 @@
                     </tbody>
                 </table>
             </div>
-            <h4>Programme de la troisième journée</h4>
             <div class="jour3">
                 <table class="prog-table">
+                    <caption>Programme de la troisième journée</caption>
                     <thead>
                         <tr>
-                            <th>Jour</th>
-                            <th>Heure</th>
-                            <th>Sujet</th>
-                            <th>Conférencier</th>
+                            <th scope="col">Jour</th>
+                            <th scope="col">Heure</th>
+                            <th scope="col">Sujet</th>
+                            <th scope="col">Conférencier</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>18 Mai</td>
+                            <td rowspan="2">18 Mai</td>
                             <td>10:00 - 11:30</td>
                             <td>Cloud computing et infrastructures modernes</td>
-                            <td>Mme Julie Moreau</td>
+                            <td>Dr. Alice Dupont</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>14:00 - 15:30</td>
                             <td>Table ronde : l'avenir des métiers tech</td>
                             <td>Tous les intervenants</td>
@@ -116,19 +106,44 @@
             <h2>Nos invités d'honneur</h2>
             <div class="invite-img">
                 <article class="alice">
-                    <img src="img/speaker_alice.png" alt="Dr. Alice Dupont" width="300">
+                    <figure>
+                        <img src="img/speaker_alice.png" alt="Dr. Alice Dupont" width="300">
+                        <figcaption>Dr. Alice Dupont</figcaption>
+                    </figure>
+                    <h3>Dr. Alice Dupont</h3>
+                    <p>Spécialiste en cloud computing et architecte de solutions distribuées.</p>
                 </article>
                 <article class="jean">
-                    <img src="img/speaker_jean.png" alt="M. Jean Martin" width="300">
+                    <figure>
+                        <img src="img/speaker_jean.png" alt="M. Jean Martin" width="300">
+                        <figcaption>M. Jean Martin</figcaption>
+                    </figure>
+                    <h3>M. Jean Martin</h3>
+                    <p>Expert en cybersécurité et gestion des risques numériques.</p>
                 </article>
                 <article class="sophie">
-                    <img src="img/speaker_sophie.png" alt="Mme Sophie Bernard" width="300">
+                    <figure>
+                        <img src="img/speaker_sophie.png" alt="Mme Sophie Bernard" width="300">
+                        <figcaption>Mme Sophie Bernard</figcaption>
+                    </figure>
+                    <h3>Mme Sophie Bernard</h3>
+                    <p>Spécialiste en intelligence artificielle et data science.</p>
                 </article>
                 <article class="karim">
-                    <img src="img/speaker_karim.png" alt="M. Karim Haddad" width="300">
+                    <figure>
+                        <img src="img/speaker_karim.png" alt="M. Karim Haddad" width="300">
+                        <figcaption>M. Karim Haddad</figcaption>
+                    </figure>
+                    <h3>M. Karim Haddad</h3>
+                    <p>Expert en développement logiciel et architecture microservices.</p>
                 </article>
                 <article class="julie">
-                    <img src="" alt="Mme Julie Moreau">
+                    <figure>
+                        <img src="img/speaker_julie.jpg" alt="Mme Julie Moreau" width="300">
+                        <figcaption>Mme Julie Moreau</figcaption>
+                    </figure>
+                    <h3>Mme Julie Moreau</h3>
+                    <p>Spécialiste en gestion de projets tech et agilité.</p>
                 </article>
             </div>
         </section>
@@ -148,3 +163,4 @@
     </footer>
 </body>
 </html>
+
